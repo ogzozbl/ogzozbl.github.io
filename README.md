@@ -22,8 +22,10 @@ Düşüncelerini post-it notlar olarak duvara yapıştırdığın küçük bir b
 ## Siteden not yazmak (en kolayı)
 
 1. **Giriş (her cihazda bir kere):** `https://ogzozbl.github.io/giris/` adresini aç. (Sitenin en altındaki küçük **·** işareti de buraya götürür.) "GitHub'da aç" düğmesine bas, açılan sayfada **Only select repositories** → `ogzozbl.github.io` seç, **Generate token**'a bas, çıkan kodu kopyalayıp giriş sayfasına yapıştır.
-2. **Yazmak:** Giriş yaptığın cihazda duvarın en başında boş bir post-it durur. Yaz, renk seç ya da fotoğraf ekle, **yapıştır**. Not hemen duvarda belirir. Herkese görünmesi 1-2 dakika sürer.
-3. **Silmek:** Notun sağ üstündeki **×** işareti.
+2. **Yazmak (bilgisayarda):** Duvarda boş bir yere tıkla, tıkladığın yerde boş bir post-it açılır. Yaz, renk seç ya da fotoğraf ekle, **yapıştır**. Not hemen orada belirir, herkese görünmesi 1-2 dakika sürer.
+   **Telefonda:** Ekran dar olduğu için notlar alt alta dizilir. Yazma kutusu en üstte hazır durur, yazdığın not duvarda boş bir yere kendiliğinden yerleşir.
+3. **Taşımak:** Bilgisayarda bir notu tutup sürükle, bıraktığın yer kaydedilir.
+   **Silmek:** Notun sağ üstündeki **×** işareti.
 4. **Çıkış:** Menüdeki **çıkış**.
 
 Telefonda siteyi açıp **Paylaş → Ana Ekrana Ekle** dersen uygulama gibi açılır.

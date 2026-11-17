@@ -179,7 +179,26 @@ a:focus-visible { outline: 2px solid var(--vurgu); outline-offset: 3px; }
 .nav #cikisLink { color: var(--soluk); font-weight: 400; }
 .giris-link { color: #66665e; text-decoration: none; padding: 0 6px; }
 
-.yazici { padding-bottom: 18px; }
+/* Serbest duvar: notlar duvarda istedikleri yerde durur */
+.wall.serbest {
+  display: block; position: relative; padding: 0;
+  width: calc(100% - 64px); max-width: 1056px; margin: 0 auto 72px;
+}
+.serbest .note { position: absolute; margin: 0; }
+.sahip .serbest { cursor: cell; }
+.sahip .serbest .note { cursor: grab; touch-action: none; }
+.sahip .serbest .note textarea { cursor: text; }
+.serbest .note.tutuluyor {
+  cursor: grabbing; transition: none; translate: 0 -6px; scale: 1.02;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .08), 0 26px 28px -14px rgba(0, 0, 0, .35);
+}
+.kaydediliyor { opacity: .75; }
+.ipucu-sahip {
+  max-width: 1056px; margin: -20px auto 22px; padding: 0 32px;
+  font: italic 16px 'Newsreader', Georgia, serif; color: var(--soluk); text-align: center;
+}
+
+.yazici { padding-bottom: 18px; z-index: 10000; rotate: -1deg; }
 .yazici:hover { translate: none; }
 .yazici textarea {
   display: block; width: 100%; min-height: 7.5em; resize: vertical;
@@ -202,8 +221,14 @@ a:focus-visible { outline: 2px solid var(--vurgu); outline-offset: 3px; }
 .btn-yapistir:disabled { opacity: .3; cursor: default; }
 .yazici-durum { margin: 8px 0 0; font: 13px/1.4 'Inter', system-ui, sans-serif; color: #7a2e22; }
 .yazici-durum:empty { display: none; }
-.renk:focus-visible, .btn-yapistir:focus-visible, .sil:focus-visible { outline: 2px solid var(--vurgu); outline-offset: 3px; }
+.renk:focus-visible, .btn-yapistir:focus-visible, .sil:focus-visible, .vazgec:focus-visible { outline: 2px solid var(--vurgu); outline-offset: 3px; }
 
+.vazgec {
+  position: absolute; top: 4px; right: 6px; width: 32px; height: 32px; padding: 0;
+  border: 0; background: transparent; cursor: pointer;
+  font: 22px/1 'Inter', system-ui, sans-serif; color: rgba(0, 0, 0, .4);
+}
+.vazgec:hover { color: var(--yazi); }
 .bekliyor { opacity: .7; }
 .bekliyor .meta { font-style: italic; text-transform: none; letter-spacing: 0; }
 .kucuk-not { opacity: .7; }
