@@ -19,7 +19,30 @@ Düşüncelerini post-it notlar olarak duvara yapıştırdığın küçük bir b
 
 ---
 
-## 2. Yeni not yazmak (her seferinde 1 dakika)
+## Siteden not yazmak (en kolayı)
+
+Sitede `/yaz/` adında sadece senin kullanabileceğin bir yazma sayfası var: **https://ogzozbl.github.io/yaz/**
+Post-it'in üstüne yaz, istersen renk seç ya da fotoğraf ekle, **duvara yapıştır**'a bas. 1-2 dakika içinde duvarda görünür.
+
+Sayfa notu doğrudan GitHub'a kaydettiği için **bir kereye mahsus bir anahtar** ister:
+
+1. GitHub'da sağ üstte profil fotoğrafın → **Settings**.
+2. Sol menünün en altında **Developer settings** → **Personal access tokens** → **Fine-grained tokens** → **Generate new token**.
+3. **Token name:** `duvar`. **Expiration:** sunulan en uzun süreyi seç (süresi dolunca yenisini alıp tekrar yapıştırırsın).
+4. **Repository access:** **Only select repositories** → `ogzozbl.github.io`.
+5. **Permissions** → **Repository permissions** → **Contents** → **Read and write**. Başka bir şeye dokunma.
+6. En altta **Generate token**. Çıkan `github_pat_...` ile başlayan anahtarı kopyala. Sadece bir kere gösterilir.
+7. `https://ogzozbl.github.io/yaz/` adresini aç, anahtarı yapıştır, **kaydet**.
+
+Bunu her cihazda bir kere yaparsın (telefon ve bilgisayar ayrı). Telefonda sayfayı açıp **Paylaş → Ana Ekrana Ekle** dersen uygulama gibi açılır. Anahtar kayıtlı olduğu cihazda menüde **+ yaz** bağlantısı da çıkar. Başkaları bu bağlantıyı görmez.
+
+> Güvenlik: Anahtar sadece o tarayıcıda saklanır ve sadece bu repoya not yazabilir. Telefonunu biri eline alırsa duvarına not yazabilir, o kadar. Bir cihazı kaybedersen GitHub'da aynı sayfadan anahtarı silmen (**Delete**) yeterli. Sayfanın altındaki "anahtarı sil" bağlantısı da anahtarı o tarayıcıdan kaldırır.
+
+Yazdığın şey yapıştırılamazsa (internet yoksa vs.) metin kaybolmaz, sayfada taslak olarak durur.
+
+---
+
+## 2. Yeni not yazmak (GitHub üzerinden, alternatif yol)
 
 1. Repo sayfanda **Add file** → **Create new file**.
 2. Dosya adı kutusuna şu biçimde yaz:

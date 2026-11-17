@@ -4,6 +4,9 @@ description: Düşüncelerimi duvara yapıştırdığım küçük bir blog.
 lang: tr
 timezone: Europe/Istanbul
 
+# /yaz/ sayfasının notları kaydettiği repo
+repo: ogzozbl/ogzozbl.github.io
+
 # Bugünün tarihli bir not, saat farkı yüzünden gizli kalmasın.
 future: true
 

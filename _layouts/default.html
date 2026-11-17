@@ -13,6 +13,9 @@
 {%- endif -%}
 </title>
 <meta name="description" content="{{ site.description }}">
+{%- if page.noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -28,6 +31,7 @@
     <a href="{{ '/' | relative_url }}">duvar</a>
     <a href="{{ '/arsiv/' | relative_url }}">arşiv</a>
     <a href="{{ '/hakkinda/' | relative_url }}">hakkında</a>
+    <a href="{{ '/yaz/' | relative_url }}" id="yazLink" hidden>+ yaz</a>
   </nav>
 </header>
 
@@ -38,5 +42,6 @@
 <footer class="foot">
   Her yeni yazı duvara bir not olarak eklenir.
 </footer>
+<script>try { if (localStorage.getItem('duvar-anahtar')) document.getElementById('yazLink').hidden = false; } catch (e) {}</script>
 </body>
 </html>
