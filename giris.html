@@ -1,0 +1,32 @@
+---
+layout: page
+title: Giriş
+permalink: /giris/
+noindex: true
+---
+<div class="giris">
+  <div id="girisYapildi" hidden>
+    <h2>giriş yapılmış</h2>
+    <p>Bu cihazda zaten giriş yaptın. <a href="{{ '/' | relative_url }}">Duvara dön</a>, en baştaki boş post-it'e yazabilirsin.</p>
+  </div>
+
+  <div id="girisForm">
+    <h2>giriş</h2>
+    <p class="giris-aciklama">Bu sayfa sadece duvarın sahibi için. Giriş yapınca duvarın en başında boş bir post-it çıkar, oraya yazarsın. Her cihazda bir kere yapılır.</p>
+
+    <ol class="adimlar">
+      <li>
+        <strong>Anahtarını oluştur.</strong>
+        <a class="btn" href="https://github.com/settings/personal-access-tokens/new?name=duvar&amp;description=duvar+sitesine+not+yazmak&amp;expires_in=none&amp;contents=write" target="_blank" rel="noopener">GitHub'da aç ↗</a>
+        <span class="ipucu">Açılan sayfada her şey hazır. Sadece <b>Repository access</b> altında <b>Only select repositories</b>'i seçip <b>{{ site.repo | split: '/' | last }}</b>'u işaretle, en alttaki yeşil <b>Generate token</b>'a bas ve çıkan kodu kopyala.</span>
+      </li>
+      <li>
+        <strong>Kodu buraya yapıştır.</strong>
+        <input id="anahtar" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" aria-label="Anahtar">
+        <button id="girisBtn" class="btn btn-ana" type="button">giriş yap</button>
+        <p id="girisDurum" class="durum" role="status" aria-live="polite"></p>
+      </li>
+    </ol>
+    <p class="ipucu">Kod sadece bu cihazda saklanır. Başkaları bu sayfayı açsa bile kendi kodları olmadan duvarına bir şey ekleyemez.</p>
+  </div>
+</div>

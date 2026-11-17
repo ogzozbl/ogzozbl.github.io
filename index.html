@@ -6,7 +6,7 @@ layout: default
   {%- include not-sinif.html post=post -%}
   {%- assign kelime = post.content | strip_html | number_of_words -%}
   {%- if kelime < 25 -%}{%- assign w = "w1" -%}{%- elsif kelime < 70 -%}{%- assign w = "w2" -%}{%- else -%}{%- assign w = "w3" -%}{%- endif %}
-  <article class="note {{ sinif }} {{ w }}{% if post.image %} has-img{% endif %}">
+  <article class="note {{ sinif }} {{ w }}{% if post.image %} has-img{% endif %}" data-yol="{{ post.path }}"{% if post.image %} data-foto="{{ post.image }}"{% endif %}>
     {%- if post.image %}
     <img class="foto" src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" loading="lazy">
     {%- endif %}
