@@ -1,0 +1,23 @@
+---
+layout: page
+title: Arşiv
+permalink: /arsiv/
+---
+<h2>arşiv</h2>
+{%- assign yillar = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+{%- for yil in yillar %}
+<h3>{{ yil.name }}</h3>
+<ul class="arsiv">
+  {%- for post in yil.items %}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <span class="tarih">{% include tarih.html tarih=post.date %}</span>
+      <span class="ozet">{{ post.content | replace: "<br />", " " | replace: "<br>", " " | replace: "</p>", " " | strip_html | strip_newlines | truncatewords: 14 }}</span>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endfor %}
+{%- if site.posts.size == 0 %}
+<p>Henüz not yok.</p>
+{%- endif %}

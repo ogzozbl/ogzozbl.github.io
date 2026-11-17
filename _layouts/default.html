@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'tr' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+{%- if page.layout == 'post' -%}
+{%- include tarih.html tarih=page.date yil=true %} — {{ site.title }}
+{%- elsif page.title -%}
+{{ page.title }} — {{ site.title }}
+{%- else -%}
+{{ site.title }}
+{%- endif -%}
+</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/duvar.css' | relative_url }}">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <a class="brand-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <p class="tagline">{{ site.tagline }}</p>
+  </div>
+  <nav class="nav" aria-label="Ana menü">
+    <a href="{{ '/' | relative_url }}">duvar</a>
+    <a href="{{ '/arsiv/' | relative_url }}">arşiv</a>
+    <a href="{{ '/hakkinda/' | relative_url }}">hakkında</a>
+  </nav>
+</header>
+
+<main>
+{{ content }}
+</main>
+
+<footer class="foot">
+  Her yeni yazı duvara bir not olarak eklenir.
+</footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Fotograflarin bu klasore yuklenir (kucuk harf, bosluksuz dosya adi: kutuphane.jpg gibi).

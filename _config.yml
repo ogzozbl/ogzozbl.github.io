@@ -1,0 +1,23 @@
+title: duvar
+tagline: düşündüklerimi buraya yapıştırıyorum
+description: Düşüncelerimi duvara yapıştırdığım küçük bir blog.
+lang: tr
+timezone: Europe/Istanbul
+
+# Bugünün tarihli bir not, saat farkı yüzünden gizli kalmasın.
+future: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md

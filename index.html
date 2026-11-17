@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<section class="wall" id="duvar" aria-label="Notlar">
+{%- for post in site.posts -%}
+  {%- include not-sinif.html post=post -%}
+  {%- assign kelime = post.content | strip_html | number_of_words -%}
+  {%- if kelime < 25 -%}{%- assign w = "w1" -%}{%- elsif kelime < 70 -%}{%- assign w = "w2" -%}{%- else -%}{%- assign w = "w3" -%}{%- endif %}
+  <article class="note {{ sinif }} {{ w }}{% if post.image %} has-img{% endif %}">
+    {%- if post.image %}
+    <img class="foto" src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}" loading="lazy">
+    {%- endif %}
+    {%- if kelime > 80 %}
+    <p>{{ post.content | replace: "<br />", " " | replace: "<br>", " " | replace: "</p>", " " | strip_html | strip_newlines | truncatewords: 55 }}</p>
+    <p class="devam"><a href="{{ post.url | relative_url }}">devamını oku →</a></p>
+    {%- else %}
+    {{ post.content }}
+    {%- endif %}
+    <div class="meta"><a href="{{ post.url | relative_url }}">{% include tarih.html tarih=post.date %}</a></div>
+  </article>
+{%- endfor %}
+{%- if site.posts.size == 0 %}
+  <p class="empty">Duvar henüz boş. İlk notunu eklemek için README dosyasındaki kılavuza bak.</p>
+{%- endif %}
+</section>

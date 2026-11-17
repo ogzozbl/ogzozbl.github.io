@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{%- include not-sinif.html post=page -%}
+<article class="single">
+  <div class="note single-note {{ sinif }}{% if page.image %} has-img{% endif %}">
+    {%- if page.image %}
+    <img class="foto" src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+    {%- endif %}
+    {{ content }}
+    <div class="meta">{% include tarih.html tarih=page.date yil=true %}</div>
+  </div>
+  <p class="geri"><a href="{{ '/' | relative_url }}">← duvara dön</a> · <a href="{{ '/arsiv/' | relative_url }}">arşiv</a></p>
+</article>

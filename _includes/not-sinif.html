@@ -1,0 +1,14 @@
+{%- comment -%}
+  Her notun rengini, eğimini ve konumunu tarihinden hesaplar.
+  Böylece yeni not eklediğinde eski notların görünümü değişmez.
+  İstersen notun başlığında "renk: sari" gibi bir satırla rengi kendin seçebilirsin.
+{%- endcomment -%}
+{%- assign tohum = include.post.date | date: "%s" | plus: 0 -%}
+{%- assign ul = include.post.url | size -%}
+{%- assign tohum = tohum | plus: ul -%}
+{%- assign ci = tohum | modulo: 6 -%}
+{%- assign ri = tohum | divided_by: 7 | floor | modulo: 9 -%}
+{%- assign di = tohum | divided_by: 13 | floor | modulo: 4 -%}
+{%- capture sinif -%}
+{%- if include.post.renk -%}c-{{ include.post.renk }}{%- else -%}c{{ ci }}{%- endif %} r{{ ri }} d{{ di }}
+{%- endcapture -%}

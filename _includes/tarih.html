@@ -1,0 +1,4 @@
+{%- assign aylar = "Oca,Şub,Mar,Nis,May,Haz,Tem,Ağu,Eyl,Eki,Kas,Ara" | split: "," -%}
+{%- assign ay_i = include.tarih | date: "%-m" | minus: 1 -%}
+{{- include.tarih | date: "%-d" }} {{ aylar[ay_i] -}}
+{%- if include.yil %} {{ include.tarih | date: "%Y" }}{% endif -%}
